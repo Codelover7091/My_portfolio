@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     } catch (err) {
       console.error("Error loading repos:", err);
-      repoContainer.innerHTML = "<p class='text-center text-danger'>âš ï¸ Failed to load projects. Please 🌐connect the Internet.</p>";
+      repoContainer.innerHTML = "<p class='text-center text-danger'>❗ Failed to load projects. Please 🌐 connect to the Internet.</p>";
     }
   }
 
@@ -61,15 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       emailjs.send('service_k3cqr0g', 'template_561m0hx', params)
         .then(() => {
-          status.innerHTML = '<div class="alert alert-success mt-3">âœ… Message sent successfully! Ill get back to you soon.</div>';
+          status.innerHTML = '<div class="alert alert-success mt-3">✅ Message sent successfully! I\'ll get back to you soon.</div>';
           form.reset();
         })
         .catch((error) => {
           console.error("EmailJS Error:", error);
-          status.innerHTML = '<div class="alert alert-danger mt-3">âŒ Failed to send message. Please try again later.</div>';
+          status.innerHTML = '<div class="alert alert-danger mt-3">❌ Failed to send message. Please try again later.</div>';
         })
         .finally(() => {
-          btnText.textContent = "Send Message ðŸš€";
+          btnText.textContent = "Send Message 🚀";
           btnSpinner.style.display = "none";
         });
     });
